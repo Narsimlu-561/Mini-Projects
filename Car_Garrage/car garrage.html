@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="car garrage.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolls Royce car Garrage</title>
+</head>
+<body>
+  <section class="main">
+    <header>
+      <a href="#"><img src="farrari.png"class="logo" alt="logo" ></a>
+      <ul class="navigation">
+        <li><a href="#">Top Features</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <h2>Ready To <span>Race</span></h2>
+      <a href="#" class="btn">Ride Now</a>
+      <img src="farrari 2.webp" class="car" alt="farrari">
+    </div><br><br><br>
+    <!-- slider content -->
+    <div class="slider">
+      <div class="slides active">
+        <div class="slides">
+          <h2><span>Brand</span><br>ferrari</h2>
+          <h2><span>Made</span><br>Italy</h2>
+        </div>
+        <h2><span>Engine</span><br>V12</h2>
+        <h2><span>Max Speed</span><br>340 km/h</h2>
+      </div>
+      <div class="slides">
+        <h2><span>Safty</span><br>5star rating</h2>
+        <h2><span>airbags</span><br>4</h2>
+      </div>
+      <div class="slides">
+        <h2><span>Engine</span><br>V12</h2>
+        <h2><span>Max Speed</span><br>340 km/h</h2>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="sci">
+        <li><a href="#"></a><ion-icon name="logo-twitter"></ion-icon></li>
+        <li><a href="#"></a><ion-icon name="logo-instagram"></ion-icon></li>
+        <li><a href="#"></a><ion-icon name="logo-github"></ion-icon></li>
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      </ul>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    const slides=document.querySelectorAll('.slides');
+    const dots=document.querySelectorAll('.dot');
+    function setActive(i){
+      for(slide of slides)
+      slide.classList.remove('active');
+      slide[i].classList.add('active');
+      for(dot of dots)
+      slide.classList.remove('active');
+      dots[i].classList.add('active');
+    }
+    for(let j=0;j<dots.lenght;j++){
+      dots[j].addEventListener('click',function(){
+        setActive(j)
+      })
+    }
+  </script>
+</body>
+</html>
